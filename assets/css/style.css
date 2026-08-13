@@ -817,13 +817,17 @@ body {
 
 .dropdown-item.review {
   color: var(--purple);
-  text-align: center;
+  text-align: left;
+  size: 13px;
   background-color: var(--purple-light);
+  font-weight: 500;
 }
 
 .dropdown-item.delete {
   color: #DC2626;
-  text-align: center;
+  text-align: left;
+  size: 13px;
+  font-weight: 500;
 }
 
 .dropdown-item:hover {
