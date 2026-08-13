@@ -17,7 +17,7 @@ body {
   display: flex;
   min-height: 100vh;
 }
-
+/* sidebar section */
 .sidebar {
   width: 240px;
   background: var(--white);
@@ -77,4 +77,47 @@ body {
 
 .nav-item.active .dot {
   background: var(--purple);
+}
+/* Main */
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+
+.topbar-title {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.topbar-user span {
+  font-size: 14px;
+  font-weight: 500;
 }
