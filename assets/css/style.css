@@ -954,3 +954,10 @@ body {
   font-size: 13px;
   outline: none;
 }
+/* review actions button */
+.btn-danger.full {
+  width: 100%;
+  text-align: center;
+  border-color: var(--border);
+  color: #DC2626;
+}
