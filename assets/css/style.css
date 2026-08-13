@@ -672,3 +672,111 @@ body {
   font-size: 11px;
   color: var(--text-gray);
 }
+/* tickets page */
+.project-title {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+.tickets-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 24px 0 18px;
+}
+
+.tickets-header h2 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.tickets-table-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tickets-table th {
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-gray);
+  font-weight: 500;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tickets-table td {
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.tickets-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ticket-name {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.ticket-desc {
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.role-cell {
+  color: var(--text-gray);
+  font-size: 12px;
+}
+
+.priority-badge,
+.status-badge-cell {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.priority-badge.high { background: #FEE2E2; color: #DC2626; }
+.priority-badge.medium { background: #FEF3C7; color: #D97706; }
+
+.status-badge-cell.progress { background: var(--purple-light); color: var(--purple); }
+.status-badge-cell.pending { background: #F3F4F6; color: #6B7280; }
+.status-badge-cell.done { background: #DCFCE7; color: #16A34A; }
+.status-badge-cell.completed { background: #EDE9FE; color: #7C3AED; }
+
+.menu-cell {
+  position: relative;
+  text-align: right;
+}
+
+.dots-btn {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+@media (max-width: 900px) {
+  .tickets-table-wrap {
+    overflow-x: auto;
+  }
+  .tickets-table {
+    min-width: 700px;
+  }
+}
