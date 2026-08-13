@@ -88,7 +88,7 @@ color: var(--primary-color);
 
 
 /* ---------- Right Side ---------- */
-.login-visual {
+/* .login-visual {
     display: flex;
     flex-direction: column;
     width: 540px;
@@ -218,4 +218,4 @@ color: var(--primary-color);
 .dot-orange { background-color: #F5A623; }
 .dot-purple { background-color: var(--primary-color); }
 .dot-green  { background-color: #22C55E; }
-
+ */

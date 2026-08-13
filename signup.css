@@ -114,10 +114,13 @@
 .signupform button:hover {
     background: var(--primary-hover);
 }
-
+.signup-security{
+    margin-top: 20px;
+}
 
 /* ---------- Right Side ---------- */
-.signup-info {
+
+/* .signup-info {
     width: 480px;
     background: var(--back-color);
     border-radius: 24px;
@@ -207,4 +210,4 @@
 
 .step:not(.active) .step-text {
     color: var(--text-muted);
-}
+} */
