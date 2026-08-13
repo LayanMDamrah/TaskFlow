@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TaskFlow</title>
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">TaskFlow</span>
+            </div>
+            <div class="nav-links">
+                <a href="#index.html"> ← Back to home</a>
+            </div>
+        </nav>
+
+
+        <div class="login-content">
+            <div class="login-form">
+                <div class="badge">WELCOM BACK</div>
+                <h1 id="h2padding">Log in to TaskFlow</h1>
+                <p>Continue managing your projects and tickets from one place.</p>
+
+                <form action="signup.php" method="POST" class="loginform">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <div class="term-forgetPas">
+                    <div class="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms" style="margin:0;">Remember me</label>
+                    </div>
+                        <div class="forget-password-link"><a href="#forgetpassword.html">Forget password?</a></div>
+                    </div>
+                    <button type="submit">Log in</button>
+                    <div class="signup-link">Don't have an account? <a href="#signup.html">Create account</a></div>
+                
+                </form>
+            </div>
+            <div class="login-visual">
+                <div class="tag">YOUR WORKSPACE</div>
+                <h3>Projects, tickets, and progress all in one view.</h3>
+                <p>Track what you manage, what is assigned to you, and what needs attention next.</p>
+                
+                <div class="preview-card">
+        <div class="preview-card-header">
+            <h5>Website Redesign</h5>
+            <span class="role-tag">Project Manager</span>
+        </div>
+        <hr/>
+        
+
+        <div class="preview-stats">
+            <div>
+                <div class="stat-header">
+                    <span class="stat-number">12</span>
+                    <span class="dot dot-orange"></span>
+                </div>
+                <div class="stat-label">Pending</div>
+            </div>
+            
+            <div>
+                <div class="stat-header">
+                    <span class="stat-number">6</span>
+                    <span class="dot dot-purple"></span>
+                </div>
+                <div class="stat-label">In Progress</div>
+            </div>
+            
+            <div>
+                <div class="stat-header">
+                    <span class="stat-number">9</span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <div class="stat-label">Done</div>
+            </div>
+        </div>
+
+        <div class="preview-updates-title">Recently updated</div>
+
+        <div class="ticket-row">
+            <span class="ticket-name">Fix login validation</span>
+            <span class="status status-progress">In Progress</span>
+        </div>
+        <div class="ticket-row">
+            <span class="ticket-name">Create project API</span>
+            <span class="status status-pending">Pending</span>
+        </div>
+        <div class="ticket-row">
+            <span class="ticket-name">Review dashboard UI</span>
+            <span class="status status-done">Done</span>
+        </div>
+    </div>
+</div>
+                
+            </div>
+
+    </body>
+</html>
