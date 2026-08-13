@@ -783,3 +783,46 @@ body {
 .tab {
   text-decoration: none;
 }
+/* ticket row dropdown menu */
+.menu-cell {
+  position: relative;
+  text-align: right;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  min-width: 150px;
+  padding: 6px;
+  z-index: 10;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 10px;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.dropdown-item.review {
+  color: var(--purple);
+}
+
+.dropdown-item.delete {
+  color: #DC2626;
+}
+
+.dropdown-item:hover {
+  background: var(--bg);
+}
