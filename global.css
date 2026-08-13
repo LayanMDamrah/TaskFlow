@@ -1,0 +1,21 @@
+:root {
+
+--primary-color: #6B40CC;      
+--primary-hover: #534AE0;        
+--text-dark:#0E131F;            
+--text-muted: #616B80;          
+--border-color: #DEE0EB;        
+--back-color:#e6e2f5;
+--font-main: 'Inter', sans-serif; 
+
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: var(--font-main);
+}
+a {
+    text-decoration: none;
+}
