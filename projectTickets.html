@@ -76,11 +76,17 @@
 
           <div class="filters">
             <div class="search-box">
-              <input type="text" placeholder="Search tickets..." />
+              <input type="text" placeholder="Search tickets..." aria-label="Search tickets" />
             </div>
-            <select class="filter-select"><option>Status: All</option></select>
-            <select class="filter-select"><option>Priority: All</option></select>
-            <select class="filter-select"><option>Assignee: All</option></select>
+            <select class="filter-select" aria-label="Filter by status">
+              <option>Status: All</option>
+            </select>
+            <select class="filter-select" aria-label="Filter by priority">
+              <option>Priority: All</option>
+            </select>
+            <select class="filter-select" aria-label="Filter by assignee">
+              <option>Assignee: All</option>
+            </select>
           </div>
 
           <div class="tickets-table-wrap">
