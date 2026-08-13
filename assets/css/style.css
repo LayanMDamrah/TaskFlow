@@ -880,3 +880,9 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.overview-row.three {
+  display: flex;
+  gap: 40px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
