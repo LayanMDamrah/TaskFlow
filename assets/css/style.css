@@ -780,3 +780,6 @@ body {
     min-width: 700px;
   }
 }
+.tab {
+  text-decoration: none;
+}
