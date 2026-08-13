@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskFlow — Projects</title>
 
-     <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-<body>
- <!-- sidebar section -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+  </head>
+  <body>
+    <!-- sidebar section -->
     <nav class="sidebar">
       <div class="logo">
         <div class="logo-mark"></div>
@@ -51,8 +52,56 @@
           <span>Tareem</span>
         </div>
       </div>
+
+      <section class="dashboard">
+        <div class="title">
+          <h1>Dashboard</h1>
+          <p class="topbar-title">
+            A quick view of your projects and assigned tickets.
+          </p>
+        </div>
+
+        <section class="cards-row">
+          <div class="card">
+            <div class="card-header">
+              <span class="topbar-title">My Projects</span>
+              <span class="dot"></span>
+            </div>
+
+            <h1 class="card-count">0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="topbar-title">Assigned Tickets</span>
+              <span class="dot"></span>
+            </div>
+
+            <h1 class="card-count">0</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span class="topbar-title">In Progress</span>
+              <span class="dot"></span>
+            </div>
+
+            <h1 class="card-count">0</h1>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="topbar-title">Need Review</span>
+              <span class="dot"></span>
+            </div>
+
+            <h1 class="card-count">0</h1>
+          </div>
+        </section>
+      </section>
+
+      
     </section>
+
     <script src="./assets/js/sidebar.js"></script>
-    
-</body>
+  </body>
 </html>

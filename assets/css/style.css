@@ -7,6 +7,7 @@
   --border: #E5E7EB; 
   --bg: #F7F7F9; 
   --white: #FFFFFF; 
+  
 } 
  
 * { box-sizing: border-box; margin: 0; padding: 0; } 
@@ -93,11 +94,13 @@ body {
 } 
 
 /* Main */ 
-.main { 
-  flex: 1; 
-  min-width: 0; 
-} 
- 
+.main {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
 .topbar { 
   display: flex; 
   align-items: center; 
