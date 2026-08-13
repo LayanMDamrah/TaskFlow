@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskFlow — Projects-Details</title>
+    <title>TaskFlow — Review Ticket</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-     <!-- sidebar section -->
+    <!-- sidebar section -->
     <nav class="sidebar">
       <div class="logo">
         <div class="logo-mark"></div>
@@ -38,19 +38,41 @@
         </li>
       </ul>
     </nav>
+
     <!-- Main -->
     <section class="main">
+      <!-- topbar section -->
       <div class="topbar">
-            <button class="menu-btn" id="menuBtn">☰</button>
-
-            <div class="topbar-title">Personal workspace</div>
-
-            <div class="topbar-user">
-                <div class="avatar">T</div>
-                <span>Tareem</span>
-            </div>
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="topbar-title">Personal workspace</div>
+        <div class="topbar-user">
+          <div class="avatar">T</div>
+          <span>Tareem</span>
         </div>
+      </div>
+
+      <div class="content"></div>
+      <div class="content">
+        <!-- page title section -->
+        <p class="review-project-label">Website Redesign</p>
+        <h1 class="review-title">Review Ticket</h1>
+
+        <div class="review-grid">
+          <div class="panel">
+            <!-- ticket header section: title + status badge + submitted by -->
+            <div class="review-ticket-top">
+              <h3>Build responsive login page</h3>
+              <span class="status-badge-cell needreview">Need Review</span>
+            </div>
+            <p class="review-submitted-by">Submitted by Ahmad Saleh · Frontend Developer</p>
+          </div>
+
+          <!-- review actions panel placeholder -->
+          <div class="panel"></div>
+        </div>
+      </div>
     </section>
+
     <script src="./assets/js/sidebar.js"></script>
   </body>
 </html>
