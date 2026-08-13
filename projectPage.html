@@ -1,33 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TaskFlow — Projects</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!-- sidebar section -->
-  <aside class="sidebar">
-    <div class="logo">
-      <div class="logo-mark"></div>
-      <span class="logo-text">TaskFlow</span>
-    </div>
-    <ul class="nav-list">
-      <li class="nav-item"><span class="dot"></span> Dashboard</li>
-      <li class="nav-item"><span class="dot"></span> My Tickets</li>
-      <li class="nav-item active"><span class="dot"></span> Projects</li>
-    </ul>
-  </aside>
-  <!-- Main -->
-  <div class="main">
-    <div class="topbar">
-      <div class="topbar-title">Personal workspace</div>
-      <div class="topbar-user">
-        <div class="avatar">T</div>
-        <span>Tareem</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — Projects</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- sidebar section -->
+    <nav class="sidebar">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
       </div>
-    </div>
-  </div>
-</body>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./dashoard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <div class="topbar-title">Personal workspace</div>
+
+        <div class="topbar-user">
+          <div class="avatar">T</div>
+          <span>Tareem</span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content-header">
+          <div>
+            <h1>Projects</h1>
+            <p class="subtitle">View and manage all projects you own or collaborate on.</p>
+          </div>
+          <button class="btn-primary">+ Create Project</button>
+        </div>
+
+        <div class="filters">
+          <div class="search-box">
+            <span>🔍</span>
+            <input type="text" placeholder="Search projects..." />
+          </div>
+          <select class="filter-select">
+            <option>All projects</option>
+          </select>
+          <select class="filter-select">
+            <option>Role: All</option>
+          </select>
+          <select class="filter-select">
+            <option>Sort: Recent</option>
+          </select>
+        </div>
+
+        <div class="projects-count">Your projects · 4</div>
+
+        <div class="projects-grid">
+          <!-- Card 1 -->
+          <div class="project-card">
+            <div class="card-top">
+              <div class="card-icon">W</div>
+              <span class="badge owner">Owner</span>
+            </div>
+            <h3>Website Redesign</h3>
+            <span class="card-tag">WEB</span>
+            <p class="card-desc">Redesign the marketing website and improve the core user experience.</p>
+            <div class="card-meta">18 tickets &nbsp;·&nbsp; 5 members</div>
+            <div class="progress-row">
+              <span>Progress</span>
+              <span class="progress-percent">72%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill purple" style="width: 72%"></div>
+            </div>
+            <div class="card-footer">
+              <div class="avatars">
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+              </div>
+              <a href="#" class="open-link">Open project →</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="project-card">
+            <div class="card-top">
+              <div class="card-icon">A</div>
+              <span class="badge member">Member</span>
+            </div>
+            <h3>Mobile App</h3>
+            <span class="card-tag">APP</span>
+            <p class="card-desc">Build the first mobile experience and connect the main product flows.</p>
+            <div class="card-meta">11 tickets &nbsp;·&nbsp; 4 members</div>
+            <div class="progress-row">
+              <span>Progress</span>
+              <span class="progress-percent">46%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill blue" style="width: 46%"></div>
+            </div>
+            <div class="card-footer">
+              <div class="avatars">
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+              </div>
+              <a href="#" class="open-link">Open project →</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="project-card">
+            <div class="card-top">
+              <div class="card-icon">M</div>
+              <span class="badge owner">Owner</span>
+            </div>
+            <h3>Marketing Site</h3>
+            <span class="card-tag">MKT</span>
+            <p class="card-desc">Campaign pages, launch content, and conversion improvements.</p>
+            <div class="card-meta">8 tickets &nbsp;·&nbsp; 3 members</div>
+            <div class="progress-row">
+              <span>Progress</span>
+              <span class="progress-percent">81%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill green" style="width: 81%"></div>
+            </div>
+            <div class="card-footer">
+              <div class="avatars">
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+              </div>
+              <a href="#" class="open-link">Open project →</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="project-card">
+            <div class="card-top">
+              <div class="card-icon">O</div>
+              <span class="badge member">Member</span>
+            </div>
+            <h3>Internal Dashboard</h3>
+            <span class="card-tag">OPS</span>
+            <p class="card-desc">Operations dashboard for internal reporting and team workflows.</p>
+            <div class="card-meta">14 tickets &nbsp;·&nbsp; 6 members</div>
+            <div class="progress-row">
+              <span>Progress</span>
+              <span class="progress-percent">35%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill orange" style="width: 35%"></div>
+            </div>
+            <div class="card-footer">
+              <div class="avatars">
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+                <span class="avatar-sm"></span>
+              </div>
+              <a href="#" class="open-link">Open project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/sidebar.js"></script>
+  </body>
 </html>
