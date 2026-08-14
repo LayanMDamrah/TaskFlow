@@ -997,3 +997,28 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+
+.form-group textarea {
+  resize: vertical;
+}
+/* modal note and action buttons */
+.modal-note {
+  background: var(--purple-light);
+  color: var(--purple);
+  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 4px 0 20px;
+}
+
+.modal-note a {
+  color: var(--purple);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
