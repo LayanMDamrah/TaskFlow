@@ -1,0 +1,256 @@
+/*landing.css*/
+.btn-get-started {
+    font-family: var(--font-main);
+    background: var(--primary-color);
+    color: #fff !important; ;
+    width:fit-content ;
+    height:fit-content ;
+    padding: 11px 17px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-style: semi-bold;
+    font-size: 14px;
+
+}
+.btn-get-started:hover {
+    background: var(--primary-hover);
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1264px;
+    margin:30px 88px 0 88px;
+    gap: 76px;
+}
+.hero-content{
+    display:block;
+    width: 100%;
+    max-width: 560px;
+    height: 510px;
+    padding: 20px 0px ;
+}
+
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+.btn-gs-large{
+    padding: 14px 22px;
+    font-size: 15px;
+}
+
+.btn-login {
+    font-family: var(--font-main);
+    background: #fff;
+    color: var(--text-dark) !important; ;
+    width:fit-content ;
+    height:fit-content ;
+    padding: 14px 22px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-style: semi-bold;
+    font-size: 15px;
+    border: 1px solid var(--border-color);
+    line-height: 100%;
+}
+.btn-login:hover {
+    background: var(--back-color);
+}
+.trust-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    height: fit-content;
+
+}
+.trust-text {
+    font-size: 12px;
+    font-weight:500;
+    font-style: medium;
+    font-family: var(--font-main);
+    line-height: 100%;
+    color: var(--text-muted);
+    padding:5px 30px 5px 0;
+}
+
+.features-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1264px;
+    margin:30px 88px 20px 88px;
+    gap: 76px;
+}
+.feature {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 408px;
+    height: fit-content;
+    max-height: 150px;
+    padding: 22px ;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    gap: 12px;
+}
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: var(--back-color);
+    border-radius: 9px;
+    color:var(--primary-color);
+    font-size: 15px;
+    font-weight: 700;
+    font-style:bold;
+    font-family: var(--font-main);
+}
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: semi-bold;
+    font-family: var(--font-main);
+    line-height: 100%;
+    color: var(--text-dark);
+    margin: 10px 0 0 0;
+}
+p.feature-p{
+    font-size:12px;
+    font-weight: 400;
+    font-style: regular;
+    font-family: var(--font-main);
+    line-height: 100%;
+    margin:12px 0 30px 0;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .hero {
+        margin: 24px 40px 0 40px;
+        gap: 40px;
+    }
+
+    .features-strip {
+        margin: 24px 40px 20px 40px;
+        gap: 24px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        height: auto; 
+        padding: 0;
+    }
+
+    .login-landing {
+        max-width: 100%;
+    }
+
+    .features-strip {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .feature {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+    .hero {
+        margin: 20px 24px 0 24px;
+        gap: 28px;
+    }
+
+    .features-strip {
+        margin: 20px 24px 20px 24px;
+        gap: 16px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .trust-line {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 6px;
+    }
+
+    .trust-text {
+        padding: 4px 16px 4px 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .hero {
+        margin: 16px 16px 0 16px;
+    }
+
+    .features-strip {
+        margin: 16px 16px 16px 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-gs-large,
+    .btn-login,
+    .btn-get-started {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

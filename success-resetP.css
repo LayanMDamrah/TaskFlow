@@ -1,0 +1,97 @@
+
+.successPanel {
+    display: block;
+    width:520px;
+    justify-content: center;
+    max-width: 1264px;
+    margin: 60px auto;
+    border: 1px solid #e5e8f0;
+    border-radius: 18px;
+    box-shadow: 0px 12px 30px 0px #00000012;
+    align-items: center;
+}
+
+.successPanel button {
+    align-items: center;
+    margin:0 auto;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-family: var(--font-main);
+    width:100%;
+}
+
+.successPanel button:hover {
+    background: var(--primary-hover);
+} 
+#success{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    gap: 60px;
+    padding: 25px
+}
+
+.step {
+    display: block;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+.step.done{
+    align-items: center;
+    justify-content: center;
+
+}
+.step-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.step.done .step-number {
+    background:var(--back-color);
+    color: var(--primary-color);
+    width:60px;
+    height: 60px;
+    font-size: 20px;
+    margin: 20px auto;
+}
+.step.done  p {
+    margin: 30px 0 35px 0;
+    max-height: none;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 22px;
+    text-align: center;
+    align-items:center;
+
+}
+.step.done .step-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.step.done .step-text {
+    color: var(--text-dark);
+    text-align: center;
+}
+h3 {
+    font-size:30px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+}
