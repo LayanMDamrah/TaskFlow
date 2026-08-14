@@ -87,6 +87,51 @@ color: var(--primary-color);
 }
 
 
+
+@media (max-width: 1024px) {
+    .login-content {
+        padding: 0 40px;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .login-content {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto;
+    }
+
+    .login-form {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .login-landing {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .login-content {
+        padding: 0 16px;
+        margin: 24px auto;
+        gap: 24px;
+    }
+
+    .login-form h1,
+    #h2padding {
+        font-size: 24px;
+    }
+
+    .term-forgetPas {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
 /* ---------- Right Side ---------- */
 /* .login-visual {
     display: flex;

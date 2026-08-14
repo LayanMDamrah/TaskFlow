@@ -91,11 +91,6 @@
     height: 16px;
     accent-color: var(--primary-color);
 }
-/* 
-.terms a {
-    color: var(--primary-color);
-    font-weight: 600;
-} */
 
 .signupform button {
     margin-top: 24px;
@@ -116,6 +111,54 @@
 }
 .signup-security{
     margin-top: 20px;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .signup-layout {
+        padding: 0 40px;
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .signup-layout {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto;
+    }
+
+    .registration-form {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .signup-security {
+        width: 100%;
+        max-width: 480px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .signup-layout {
+        padding: 0 16px;
+        margin: 24px auto;
+        gap: 24px;
+    }
+
+    .registration-form h1,
+    #h2padding {
+        font-size: 24px;
+    }
+
+    .phone-gender {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 /* ---------- Right Side ---------- */
