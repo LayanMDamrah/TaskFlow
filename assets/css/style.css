@@ -768,3 +768,46 @@ body {
   justify-content: flex-end;
   gap: 10px;
 }
+/* delete project modal */
+.modal-box.small {
+  max-width: 460px;
+}
+
+.warning-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #FEE2E2;
+  color: #DC2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.modal-danger-text {
+  color: #DC2626;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.modal-desc {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn-danger-solid {
+  background: #DC2626;
+  color: var(--white);
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
