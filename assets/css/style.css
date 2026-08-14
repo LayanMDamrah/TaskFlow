@@ -1202,3 +1202,20 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+/* add member modal - selected user row */
+.selected-user-row {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+
+.check-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--purple);
+  font-weight: 700;
+}

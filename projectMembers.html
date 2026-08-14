@@ -55,7 +55,7 @@
         <!-- page title + add member button -->
         <div class="tickets-header">
           <h1 class="project-title">Website Redesign</h1>
-          <button class="btn-primary">Add Member</button>
+          <button class="btn-primary" onclick="document.getElementById('addMemberModal').classList.add('show')">Add Member</button>
         </div>
 
         <!-- tabs section -->
@@ -179,7 +179,42 @@
         </div>
       </div>
     </section>
-    
+        <!-- add member modal -->
+    <div class="modal-overlay" id="addMemberModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box">
+        <h2>Add Member</h2>
+        <p class="modal-sub">Add an existing user to this project and define their role here.</p>
+
+        <div class="form-group">
+          <label>Search user</label>
+          <input type="text" placeholder="Search by name or email">
+        </div>
+
+        <div class="member-row selected-user-row">
+          <div class="member-avatar">AK</div>
+          <div>
+            <p class="member-name">Ahmad Khalil</p>
+            <span class="member-role">ahmad@example.com</span>
+          </div>
+          <span class="check-icon">✓</span>
+        </div>
+
+        <div class="form-group">
+          <label for="project-role-select">Project Role / Job</label>
+          <select id="project-role-select" aria-label="Project Role / Job">
+            <option>Frontend Developer</option>
+          </select>
+        </div>
+
+        <p class="modal-note-small">This role applies only within this project.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('addMemberModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-primary">Add Member</button>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/js/sidebar.js"></script>
   </body>
 </html>
