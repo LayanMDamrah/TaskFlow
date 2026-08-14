@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — Review Ticket</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- sidebar section -->
+    <nav class="sidebar">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./dashoard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+      <!-- topbar section -->
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="topbar-title">Personal workspace</div>
+        <div class="topbar-user">
+          <div class="avatar">T</div>
+          <span>Tareem</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- page title section -->
+        <p class="review-project-label">Website Redesign</p>
+        <h1 class="review-title">Review Ticket</h1>
+
+        <div class="review-grid">
+          <div class="panel">
+            <!-- ticket header section: title + status badge + submitted by -->
+            <div class="review-ticket-top">
+              <h3>Build responsive login page</h3>
+              <span class="status-badge-cell needreview">Need Review</span>
+            </div>
+            <p class="review-submitted-by">Submitted by Ahmad Saleh · Frontend Developer</p>
+            <!-- description section -->
+            <div class="overview-block">
+              <span class="label">Description</span>
+              <p class="value-text">Implement the responsive login page according to the approved design, including validation states and mobile layout.</p>
+            </div>
+
+            <!-- priority / due date / assignee section -->
+            <div class="overview-row three">
+              <div>
+                <span class="label">Priority</span>
+                <span class="priority-badge high">High</span>
+              </div>
+              <div>
+                <span class="label">Due Date</span>
+                <p class="value-text">Aug 18, 2026</p>
+              </div>
+              <div>
+                <span class="label">Current assignee</span>
+                <p class="value-text">Ahmad Saleh</p>
+              </div>
+            </div>
+            <hr class="divider" />
+
+            <!-- submission note section -->
+            <div class="overview-block">
+              <span class="label">Submission note</span>
+              <div class="note-box">
+                <p class="note-text">"Finished the responsive layout and validation states. Ready for review."</p>
+                <span class="note-meta">Ahmad · 3:04 PM</span>
+              </div>
+            </div>
+
+            <!-- activity log section -->
+            <div class="overview-block">
+              <span class="label">Activity</span>
+              <ul class="activity-list">
+                <li>
+                  <span class="activity-dot orange"></span>
+                  <div>
+                    <p class="activity-text">Ahmad moved ticket to Need Review</p>
+                    <span class="activity-time">Today, 3:04 PM</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="activity-dot purple"></span>
+                  <div>
+                    <p class="activity-text">Ahmad changed status to In Progress</p>
+                    <span class="activity-time">Today, 11:20 AM</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="activity-dot purple"></span>
+                  <div>
+                    <p class="activity-text">You assigned ticket to Ahmad</p>
+                    <span class="activity-time">Aug 14, 9:30 AM</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- add comment section -->
+            <div class="overview-block">
+              <span class="label">Add a comment</span>
+              <input type="text" class="comment-input" placeholder="Write feedback or instructions..." />
+            </div>
+          </div>
+
+           <!-- review actions panel section -->
+          <div class="panel">
+            <h3>Review Actions</h3>
+            <p class="panel-sub">Choose what happens to this ticket.</p>
+
+            <div class="actions-list">
+              <button class="btn-primary full" onclick="document.getElementById('approveModal').classList.add('show')">Approve & Mark Done</button>
+              <button class="btn-outline full" onclick="document.getElementById('requestChangesModal').classList.add('show')">Request Changes</button>
+              <button class="btn-outline full" onclick="document.getElementById('reassignModal').classList.add('show')">Reassign Ticket</button>
+              <button class="btn-danger full" onclick="document.getElementById('deleteTicketModal').classList.add('show')">Delete ticket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- request changes modal -->
+    <div class="modal-overlay" id="requestChangesModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box">
+        <h2>Request Changes</h2>
+        <p class="modal-sub">Send this ticket back to the current assignee with your feedback.</p>
+
+        <div class="modal-note">
+          Ticket: Build responsive login page · Assignee: Ahmad Saleh
+        </div>
+
+        <form class="modal-form">
+          <div class="form-group">
+            <label>Changes required</label>
+            <textarea rows="3" placeholder="Please update the form validation and fix the mobile spacing before resubmitting."></textarea>
+          </div>
+        </form>
+
+        <p class="modal-note-small">The ticket status changes to Attention and returns to In Progress.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('requestChangesModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-primary">Send Back</button>
+        </div>
+      </div>
+    </div>
+    <!-- reassign ticket modal -->
+    <div class="modal-overlay" id="reassignModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box">
+        <p class="modal-note-small" style="margin: 0 0 4px;">Ticket</p>
+        <div class="review-ticket-top" style="margin-bottom: 20px;">
+          <h2 style="font-size: 17px; margin: 0;">Fix login validation</h2>
+          <span class="status-badge-cell progress">In Progress</span>
+        </div>
+
+        <div class="form-group">
+          <label>Current assignee</label>
+          <div class="member-row" style="border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;">
+            <div class="member-avatar">AK</div>
+            <div>
+              <p class="member-name">Ahmad Khalil</p>
+              <span class="member-role">Frontend Developer</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="modal-form">
+          <div class="form-group">
+            <label for="reassignTo">Reassign to</label>
+            <span class="panel-sub" style="margin: 0 0 6px;">Choose another member in this project</span>
+            <select id="reassignTo" aria-label="Reassign to">
+              <option>Lina Saad — UI/UX Designer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Handoff note (optional)</label>
+            <textarea rows="3" placeholder="Add context for the new assignee..."></textarea>
+          </div>
+        </form>
+
+        <p class="modal-note-small">The ticket history stays saved, including the previous assignee.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('reassignModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-primary">Reassign</button>
+        </div>
+      </div>
+    </div>
+    <!-- delete ticket modal -->
+    <div class="modal-overlay" id="deleteTicketModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="warning-icon">!</div>
+        <h2>Delete this ticket?</h2>
+        <p class="modal-danger-text">This action cannot be undone.</p>
+        <p class="modal-desc">"Fix login validation" will be permanently removed from this project and from the assigned member's My Tickets.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('deleteTicketModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-danger-solid">Delete Ticket</button>
+        </div>
+      </div>
+    </div>
+    <!-- approve ticket modal -->
+    <div class="modal-overlay" id="approveModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="success-icon">✓</div>
+        <h2>Approve &amp; Mark Done?</h2>
+        <p class="modal-sub">This ticket is currently waiting for your review.</p>
+
+        <div class="ticket-summary-box">
+          <p class="ticket-summary-title">Fix login validation</p>
+          <p class="ticket-summary-assignee">Assigned to Ahmad Khalil</p>
+          <p class="status-transition">Need Review <span>→</span> Done</p>
+        </div>
+
+        <p class="modal-desc">Approving will mark the work as completed, keep the ticket in the project history, and record your approval in the activity log.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('approveModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-success-solid">Mark Done</button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/sidebar.js"></script>
+  </body>
+</html>
