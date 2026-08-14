@@ -38,5 +38,141 @@
         </li>
       </ul>
     </nav>
+    <!-- Main -->
+    <section class="main">
+      <div class="topbar">
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <div class="topbar-title">Personal workspace</div>
+
+            <div class="topbar-user">
+                <div class="avatar">T</div>
+                <span>Tareem</span>
+            </div>
+        </div>
+        <div class="content">
+        <div class="breadcrumb">
+          <a href="./projectPage.html">Projects</a>
+          <span>›</span>
+          <span>Website Redesign</span>
+        </div>
+
+        <div class="details-header">
+          <div>
+            <h1>Website Redesign</h1>
+            <p class="subtitle">Redesign the company website with a cleaner structure, improved navigation and responsive layouts.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn-outline">Edit Project</button>
+            <button class="btn-danger">Delete Project</button>
+          </div>
+        </div>
+
+        <span class="created-by">Created by you</span>
+
+        <div class="tabs">
+          <a href="./projectDetails.html" class="tab active">Overview</a>
+          <a href="./projectTickets.html" class="tab">Tickets</a>
+          <a href="./projectMembers.html" class="tab">Members</a>
+        </div>
+
+        <!-- Project overview and quick actions section -->
+        <div class="details-grid">
+          <div class="panel">
+            <h3>Project Overview</h3>
+
+            <div class="overview-block">
+              <span class="label">Description</span>
+              <p class="value-text">Redesign the company website with a cleaner structure, improved navigation and responsive layouts.</p>
+            </div>
+
+            <div class="overview-row">
+              <div>
+                <span class="label">Start Date</span>
+                <p class="value-text">12 Aug 2026</p>
+              </div>
+              <div>
+                <span class="label">End Date</span>
+                <p class="value-text">30 Sep 2026</p>
+              </div>
+              <div>
+                <span class="label">Status</span>
+                <span class="status-badge">Active</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Quick Actions</h3>
+            <p class="panel-sub">Manage this project.</p>
+
+            <div class="actions-list">
+              <button class="btn-primary full">Create Ticket</button>
+              <button class="btn-outline full">Add Member</button>
+              <button class="btn-outline full">Edit Project</button>
+            </div>
+          </div>
+        </div>
+        <!-- Members and tickets section -->
+        <div class="details-grid">
+          <div class="panel">
+            <h3>Project Members</h3>
+            <p class="panel-sub">5 members</p>
+
+            <div class="members-list">
+              <div class="member-row">
+                <div class="member-avatar">TA</div>
+                <div>
+                  <p class="member-name">Tareem Abuabah</p>
+                  <span class="member-role">Created project</span>
+                </div>
+              </div>
+
+              <div class="member-row">
+                <div class="member-avatar">AM</div>
+                <div>
+                  <p class="member-name">Ahmad Mohammad</p>
+                  <span class="member-role">Member</span>
+                </div>
+              </div>
+
+              <div class="member-row">
+                <div class="member-avatar">LN</div>
+                <div>
+                  <p class="member-name">Lina Nasser</p>
+                  <span class="member-role">Member</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-outline full">Manage Members</button>
+          </div>
+
+          <div class="panel">
+            <h3>Tickets</h3>
+            <p class="panel-sub">Project ticket activity</p>
+
+            <div class="stats-row">
+              <div class="stat-box">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Total Tickets</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">3</span>
+                <span class="stat-label">In Progress</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Need Review</span>
+              </div>
+            </div>
+
+            <button class="btn-outline full">View All Tickets</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/sidebar.js"></script>
   </body>
 </html>
