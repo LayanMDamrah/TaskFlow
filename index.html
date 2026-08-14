@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — Projects</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+  </head>
+  <body>
+    <!-- sidebar section -->
+    <nav class="sidebar">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./dashoard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+ <div class="topbar">
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <div class="topbar-title">Personal workspace</div>
+
+  <div class="topbar-user" id="profileBtn">
+    <div class="avatar">T</div>
+    <span>Tareem</span>
+    <span class="profile-arrow">⌄</span>
+
+    <div class="profile-dropdown" id="profileDropdown">
+      <a href="./profile.html">Profile</a>
+      <a href="./accountSettings.html">Account Settings</a>
+      <a href="#" class="logout">Log out</a>
+    </div>
+  </div>
+</div>
+
+      <div class="main-container">
+        <section class="dashboard">
+          <div class="title">
+            <h1>Dashboard</h1>
+            <p class="topbar-title">
+              A quick view of your projects and assigned tickets.
+            </p>
+          </div>
+
+          <section class="cards-row">
+            <div class="card">
+              <div class="card-header">
+                <span class="topbar-title">My Projects</span>
+                <span class="dot"></span>
+              </div>
+
+              <h1 class="card-count">0</h1>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="topbar-title">Assigned Tickets</span>
+                <span class="dot"></span>
+              </div>
+
+              <h1 class="card-count">0</h1>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="topbar-title">In Progress</span>
+                <span class="dot"></span>
+              </div>
+
+              <h1 class="card-count">0</h1>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="topbar-title">Need Review</span>
+                <span class="dot"></span>
+              </div>
+
+              <h1 class="card-count">0</h1>
+            </div>
+          </section>
+
+          <section class="cards-row">
+            <div class="my-projects">
+              <div class="card-header">
+                <h3 class="">My Projects</h3>
+                <span class="purple-text">View all →</span>
+              </div>
+
+              <div class="my-projects-col">
+                <div class="col-card">
+                  <div class="left-card">
+                    <span>Website Redesign</span>
+                    <span class="purple-text">Project Manager</span>
+                  </div>
+                  <span class="topbar-title">82%</span>
+                </div>
+              </div>
+
+              <div class="my-projects-col">
+                <div class="col-card">
+                  <div class="left-card">
+                    <span>Mobile App</span>
+                    <span class="blue-text">Employee</span>
+                  </div>
+                  <span class="topbar-title">46%</span>
+                </div>
+              </div>
+
+              <div class="my-projects-col">
+                <div class="col-card">
+                  <div class="left-card">
+                    <span>Internal Dashboard</span>
+                    <span class="blue-text">Employee</span>
+                  </div>
+                  <span class="topbar-title">35%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- tasks -->
+
+            <div class="my-projects">
+              <div class="card-header">
+                <h3 class="">My Tasks</h3>
+                <span class="purple-text">View all →</span>
+              </div>
+
+              <div class="my-projects-col">
+                <div class="col-card">
+                  <div class="left-card">
+                    <span>Fix login validation</span>
+                    <span class="topbar-title">Website Redesign</span>
+                  </div>
+                  <span class="orange-text">In Progress</span>
+                </div>
+              </div>
+
+              <div class="my-projects-col">
+                <div class="col-card">
+                  <div class="left-card">
+                    <span>Create project API UI</span>
+                    <span class="topbar-title">Website Redesign</span>
+                  </div>
+                  <span class="topbar-title">Pending</span>
+                </div>
+              </div>
+
+              <div class="my-projects-col">
+                <div class="col-card">
+                  <div class="left-card">
+                    <span>Review dashboard UI</span>
+                    <span class="topbar-title">Internal Dashboard</span>
+                  </div>
+                  <span class="green-text">Completed (Need To Review)</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="recent-activity">
+            <div class="recent-header">
+              <h3>Recent Activity</h3>
+            </div>
+
+            <div class="activity-row">
+              <span class="activity-dot purple"></span>
+              <span class="activity-project">Website Redesign</span>
+              <span class="activity-description">
+                Ticket “Fix login validation” moved to In Progress
+              </span>
+              <span class="activity-time">10 min ago</span>
+            </div>
+
+            <div class="activity-row">
+              <span class="activity-dot blue"></span>
+              <span class="activity-project">Mobile App</span>
+              <span class="activity-description">
+                You were added as an Employee
+              </span>
+              <span class="activity-time">Yesterday</span>
+            </div>
+
+            <div class="activity-row">
+              <span class="activity-dot green"></span>
+              <span class="activity-project">Internal Dashboard</span>
+              <span class="activity-description">
+                Ticket “Review dashboard UI” marked Completed (Need To Review)
+              </span>
+              <span class="activity-time">2 days ago</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <script src="./assets/js/sidebar.js"></script>
+   
+  </body>
+</html>
