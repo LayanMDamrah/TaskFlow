@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — Project Members</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- sidebar section -->
+    <nav class="sidebar">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./dashoard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+      <!-- topbar section -->
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="topbar-title">Personal workspace</div>
+        <div class="topbar-user">
+          <div class="avatar">T</div>
+          <span>Tareem</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- page title + add member button -->
+        <div class="tickets-header">
+          <h1 class="project-title">Website Redesign</h1>
+          <button class="btn-primary">Add Member</button>
+        </div>
+
+        <!-- tabs section -->
+        <div class="tabs">
+          <a href="./projectDetails.html" class="tab">Overview</a>
+          <a href="./projectTickets.html" class="tab">Tickets</a>
+          <a href="./projectMembers.html" class="tab active">Members</a>
+        </div>
+        <!-- members panel header -->
+        <div class="panel members-header-panel">
+          <h3>Project Members</h3>
+          <p class="panel-sub">6 members</p>
+        </div>
+
+        <!-- members table panel -->
+        <div class="tickets-table-wrap">
+          <table class="tickets-table">
+            <thead>
+              <tr>
+                <th>Member</th>
+                <th>Project role</th>
+                <th>Email</th>
+                <th>Tickets</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- rows -->
+               <tr>
+                <td>
+                  <div class="member-row">
+                    <div class="member-avatar">TA</div>
+                    <div>
+                      <p class="member-name">Tareem Abuabah</p>
+                      <span class="member-role">Created by you</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="role-owner">Project Owner</td>
+                <td class="email-cell">tareem@example.com</td>
+                <td>3</td>
+                <td><span class="owner-label">Owner</span></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="member-row">
+                    <div class="member-avatar">AK</div>
+                    <div>
+                      <p class="member-name">Ahmad Khalil</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Frontend Developer</td>
+                <td class="email-cell">ahmad@example.com</td>
+                <td>5</td>
+                <td><button class="btn-remove">Remove</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="member-row">
+                    <div class="member-avatar">LN</div>
+                    <div>
+                      <p class="member-name">Lina Nasser</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Backend Developer</td>
+                <td class="email-cell">lina@example.com</td>
+                <td>4</td>
+                <td><button class="btn-remove">Remove</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="member-row">
+                    <div class="member-avatar">OS</div>
+                    <div>
+                      <p class="member-name">Omar Saleh</p>
+                    </div>
+                  </div>
+                </td>
+                <td>UI/UX Designer</td>
+                <td class="email-cell">omar@example.com</td>
+                <td>2</td>
+                <td><button class="btn-remove">Remove</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="member-row">
+                    <div class="member-avatar">SA</div>
+                    <div>
+                      <p class="member-name">Sara Ali</p>
+                    </div>
+                  </div>
+                </td>
+                <td>QA Engineer</td>
+                <td class="email-cell">sara@example.com</td>
+                <td>3</td>
+                <td><button class="btn-remove">Remove</button></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="member-row">
+                    <div class="member-avatar">YH</div>
+                    <div>
+                      <p class="member-name">Yousef Hamdan</p>
+                    </div>
+                  </div>
+                </td>
+                <td>DevOps Engineer</td>
+                <td class="email-cell">yousef@example.com</td>
+                <td>1</td>
+                <td><button class="btn-remove">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/sidebar.js"></script>
+  </body>
+</html>
