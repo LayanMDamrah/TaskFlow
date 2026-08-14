@@ -64,7 +64,7 @@
           </div>
           <div class="header-actions">
             <button class="btn-outline" onclick="document.getElementById('editProjectModal').classList.add('show')">Edit Project</button>
-            <button class="btn-danger">Delete Project</button>
+            <button class="btn-danger" onclick="document.getElementById('deleteProjectModal').classList.add('show')">Delete Project</button>
           </div>
         </div>
 
@@ -217,6 +217,20 @@
         <div class="modal-actions">
           <button type="button" class="btn-outline" onclick="document.getElementById('editProjectModal').classList.remove('show')">Cancel</button>
           <button type="button" class="btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+    <!-- delete project modal -->
+    <div class="modal-overlay" id="deleteProjectModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="warning-icon">!</div>
+        <h2>Delete project?</h2>
+        <p class="modal-danger-text">This action cannot be undone.</p>
+        <p class="modal-desc">Deleting "Website Redesign" will remove the project for all members and delete its tickets from their My Tickets views.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('deleteProjectModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-danger-solid">Delete Project</button>
         </div>
       </div>
     </div>
