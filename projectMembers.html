@@ -84,7 +84,7 @@
             </thead>
             <tbody>
               <!-- rows -->
-               <tr>
+              <tr>
                 <td>
                   <div class="member-row">
                     <div class="member-avatar">TA</div>
@@ -112,7 +112,7 @@
                 <td>Frontend Developer</td>
                 <td class="email-cell">ahmad@example.com</td>
                 <td>5</td>
-                <td><button class="btn-remove">Remove</button></td>
+                <td><button class="btn-remove" onclick="document.getElementById('removeMemberModal').classList.add('show')">Remove</button></td>
               </tr>
 
               <tr>
@@ -127,7 +127,7 @@
                 <td>Backend Developer</td>
                 <td class="email-cell">lina@example.com</td>
                 <td>4</td>
-                <td><button class="btn-remove">Remove</button></td>
+                <td><button class="btn-remove" onclick="document.getElementById('removeMemberModal').classList.add('show')">Remove</button></td>
               </tr>
 
               <tr>
@@ -142,7 +142,7 @@
                 <td>UI/UX Designer</td>
                 <td class="email-cell">omar@example.com</td>
                 <td>2</td>
-                <td><button class="btn-remove">Remove</button></td>
+                <td><button class="btn-remove" onclick="document.getElementById('removeMemberModal').classList.add('show')">Remove</button></td>
               </tr>
 
               <tr>
@@ -157,7 +157,7 @@
                 <td>QA Engineer</td>
                 <td class="email-cell">sara@example.com</td>
                 <td>3</td>
-                <td><button class="btn-remove">Remove</button></td>
+                <td><button class="btn-remove" onclick="document.getElementById('removeMemberModal').classList.add('show')">Remove</button></td>
               </tr>
 
               <tr>
@@ -172,14 +172,15 @@
                 <td>DevOps Engineer</td>
                 <td class="email-cell">yousef@example.com</td>
                 <td>1</td>
-                <td><button class="btn-remove">Remove</button></td>
+                <td><button class="btn-remove" onclick="document.getElementById('removeMemberModal').classList.add('show')">Remove</button></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
-        <!-- add member modal -->
+
+    <!-- add member modal -->
     <div class="modal-overlay" id="addMemberModal" onclick="if(event.target === this) this.classList.remove('show')">
       <div class="modal-box">
         <h2>Add Member</h2>
@@ -211,6 +212,21 @@
         <div class="modal-actions">
           <button type="button" class="btn-outline" onclick="document.getElementById('addMemberModal').classList.remove('show')">Cancel</button>
           <button type="button" class="btn-primary">Add Member</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- remove member modal -->
+    <div class="modal-overlay" id="removeMemberModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="warning-icon">!</div>
+        <h2>Remove member?</h2>
+        <p class="modal-danger-text">This action cannot be undone.</p>
+        <p class="modal-desc">This will end access to the project. Any tickets currently assigned to her will still need to be reassigned by you.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('removeMemberModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-danger-solid">Remove Member</button>
         </div>
       </div>
     </div>
