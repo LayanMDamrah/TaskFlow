@@ -378,8 +378,17 @@ box-shadow:0px 30px 60px rgba(38, 26, 64, 0.08);
     background: var(--primary-color);
     color: #fff;
 }
+.step.done .step-number {
+    background:#22C55E;
+    color: #fff;
+}
 
-.step:not(.active) .step-number {
+
+/* .step:not(.active) .step-number { 
+    background: #F0F0F0;
+    color: #999;
+} */
+.step .step-number { 
     background: #F0F0F0;
     color: #999;
 }
