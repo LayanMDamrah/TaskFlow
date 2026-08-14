@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — Review Ticket</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- sidebar section -->
+    <nav class="sidebar">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./dashoard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+      <!-- topbar section -->
+      <div class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="topbar-title">Personal workspace</div>
+        <div class="topbar-user">
+          <div class="avatar">T</div>
+          <span>Tareem</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- page title section -->
+        <p class="review-project-label">Website Redesign</p>
+        <h1 class="review-title">Review Ticket</h1>
+
+        <div class="review-grid">
+          <div class="panel">
+            <!-- ticket header section: title + status badge + submitted by -->
+            <div class="review-ticket-top">
+              <h3>Build responsive login page</h3>
+              <span class="status-badge-cell needreview">Need Review</span>
+            </div>
+            <p class="review-submitted-by">Submitted by Ahmad Saleh · Frontend Developer</p>
+            <!-- description section -->
+            <div class="overview-block">
+              <span class="label">Description</span>
+              <p class="value-text">Implement the responsive login page according to the approved design, including validation states and mobile layout.</p>
+            </div>
+
+            <!-- priority / due date / assignee section -->
+            <div class="overview-row three">
+              <div>
+                <span class="label">Priority</span>
+                <span class="priority-badge high">High</span>
+              </div>
+              <div>
+                <span class="label">Due Date</span>
+                <p class="value-text">Aug 18, 2026</p>
+              </div>
+              <div>
+                <span class="label">Current assignee</span>
+                <p class="value-text">Ahmad Saleh</p>
+              </div>
+            </div>
+            <hr class="divider" />
+
+            <!-- submission note section -->
+            <div class="overview-block">
+              <span class="label">Submission note</span>
+              <div class="note-box">
+                <p class="note-text">"Finished the responsive layout and validation states. Ready for review."</p>
+                <span class="note-meta">Ahmad · 3:04 PM</span>
+              </div>
+            </div>
+
+            <!-- activity log section -->
+            <div class="overview-block">
+              <span class="label">Activity</span>
+              <ul class="activity-list">
+                <li>
+                  <span class="activity-dot orange"></span>
+                  <div>
+                    <p class="activity-text">Ahmad moved ticket to Need Review</p>
+                    <span class="activity-time">Today, 3:04 PM</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="activity-dot purple"></span>
+                  <div>
+                    <p class="activity-text">Ahmad changed status to In Progress</p>
+                    <span class="activity-time">Today, 11:20 AM</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="activity-dot purple"></span>
+                  <div>
+                    <p class="activity-text">You assigned ticket to Ahmad</p>
+                    <span class="activity-time">Aug 14, 9:30 AM</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- add comment section -->
+            <div class="overview-block">
+              <span class="label">Add a comment</span>
+              <input type="text" class="comment-input" placeholder="Write feedback or instructions..." />
+            </div>
+          </div>
+
+           <!-- review actions panel section -->
+          <div class="panel">
+            <h3>Review Actions</h3>
+            <p class="panel-sub">Choose what happens to this ticket.</p>
+
+            <div class="actions-list">
+              <button class="btn-primary full">Approve & Mark Done</button>
+              <button class="btn-outline full">Request Changes</button>
+              <button class="btn-outline full">Reassign Ticket</button>
+              <button class="btn-danger full">Delete ticket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/sidebar.js"></script>
+  </body>
+</html>

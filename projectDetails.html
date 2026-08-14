@@ -38,5 +38,202 @@
         </li>
       </ul>
     </nav>
+    <!-- Main -->
+    <section class="main">
+      <div class="topbar">
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <div class="topbar-title">Personal workspace</div>
+
+            <div class="topbar-user">
+                <div class="avatar">T</div>
+                <span>Tareem</span>
+            </div>
+        </div>
+        <div class="content">
+        <div class="breadcrumb">
+          <a href="./projectPage.html">Projects</a>
+          <span>›</span>
+          <span>Website Redesign</span>
+        </div>
+
+        <div class="details-header">
+          <div>
+            <h1>Website Redesign</h1>
+            <p class="subtitle">Redesign the company website with a cleaner structure, improved navigation and responsive layouts.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn-outline" onclick="document.getElementById('editProjectModal').classList.add('show')">Edit Project</button>
+            <button class="btn-danger" onclick="document.getElementById('deleteProjectModal').classList.add('show')">Delete Project</button>
+          </div>
+        </div>
+
+        <span class="created-by">Created by you</span>
+
+        <div class="tabs">
+          <a href="./projectDetails.html" class="tab active">Overview</a>
+          <a href="./projectTickets.html" class="tab">Tickets</a>
+          <a href="./projectMembers.html" class="tab">Members</a>
+        </div>
+
+        <!-- Project overview and quick actions section -->
+        <div class="details-grid">
+          <div class="panel">
+            <h3>Project Overview</h3>
+
+            <div class="overview-block">
+              <span class="label">Description</span>
+              <p class="value-text">Redesign the company website with a cleaner structure, improved navigation and responsive layouts.</p>
+            </div>
+
+            <div class="overview-row">
+              <div>
+                <span class="label">Start Date</span>
+                <p class="value-text">12 Aug 2026</p>
+              </div>
+              <div>
+                <span class="label">End Date</span>
+                <p class="value-text">30 Sep 2026</p>
+              </div>
+              <div>
+                <span class="label">Status</span>
+                <span class="status-badge">Active</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Quick Actions</h3>
+            <p class="panel-sub">Manage this project.</p>
+
+            <div class="actions-list">
+              <button class="btn-primary full">Create Ticket</button>
+              <button class="btn-outline full">Add Member</button>
+              <button class="btn-outline full">Edit Project</button>
+            </div>
+          </div>
+        </div>
+        <!-- Members and tickets section -->
+        <div class="details-grid">
+          <div class="panel">
+            <h3>Project Members</h3>
+            <p class="panel-sub">5 members</p>
+
+            <div class="members-list">
+              <div class="member-row">
+                <div class="member-avatar">TA</div>
+                <div>
+                  <p class="member-name">Tareem Abuabah</p>
+                  <span class="member-role">Created project</span>
+                </div>
+              </div>
+
+              <div class="member-row">
+                <div class="member-avatar">AM</div>
+                <div>
+                  <p class="member-name">Ahmad Mohammad</p>
+                  <span class="member-role">Member</span>
+                </div>
+              </div>
+
+              <div class="member-row">
+                <div class="member-avatar">LN</div>
+                <div>
+                  <p class="member-name">Lina Nasser</p>
+                  <span class="member-role">Member</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-outline full">Manage Members</button>
+          </div>
+
+          <div class="panel">
+            <h3>Tickets</h3>
+            <p class="panel-sub">Project ticket activity</p>
+
+            <div class="stats-row">
+              <div class="stat-box">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Total Tickets</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">3</span>
+                <span class="stat-label">In Progress</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Need Review</span>
+              </div>
+            </div>
+
+            <button class="btn-outline full">View All Tickets</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- edit project modal -->
+    <div class="modal-overlay" id="editProjectModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box">
+        <h2>Project Information</h2>
+        <p class="modal-sub">Make changes to the project details below.</p>
+
+        <form class="modal-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="projectName">Project Name</label>
+              <input id="projectName" name="projectName" type="text" value="Website Redesign" placeholder="Enter project name" />
+            </div>
+            <div class="form-group">
+              <label for="projectStatus">Project Status</label>
+              <select id="projectStatus" name="projectStatus">
+                <option>Active</option>
+                <option>On Hold</option>
+                <option>Completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="projectDescription">Description</label>
+            <textarea id="projectDescription" name="projectDescription" rows="3" placeholder="Enter project description">Redesign the company website to improve usability, performance, and the overall customer experience.</textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input id="startDate" name="startDate" type="text" value="Aug 01, 2026" placeholder="Enter start date" />
+            </div>
+            <div class="form-group">
+              <label for="endDate">End Date</label>
+              <input id="endDate" name="endDate" type="text" value="Sep 30, 2026" placeholder="Enter end date" />
+            </div>
+          </div>
+        </form>
+        <div class="modal-note">
+          Project members are <a href="./projectMembers.html">managed separately</a> from the Members page.
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('editProjectModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </div>
+    <!-- delete project modal -->
+    <div class="modal-overlay" id="deleteProjectModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="warning-icon">!</div>
+        <h2>Delete project?</h2>
+        <p class="modal-danger-text">This action cannot be undone.</p>
+        <p class="modal-desc">Deleting "Website Redesign" will remove the project for all members and delete its tickets from their My Tickets views.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('deleteProjectModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-danger-solid">Delete Project</button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/sidebar.js"></script>
   </body>
 </html>
