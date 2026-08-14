@@ -971,3 +971,29 @@ body {
   color: var(--text-dark);
   margin-bottom: 4px;
 }
+/* member rows */
+.role-owner {
+  color: var(--purple);
+  font-weight: 500;
+}
+
+.email-cell {
+  color: var(--text-gray);
+}
+
+.owner-label {
+  color: var(--purple);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn-remove {
+  background: var(--white);
+  border: 1px solid #FCA5A5;
+  color: #DC2626;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
