@@ -136,7 +136,7 @@
             <p class="panel-sub">Choose what happens to this ticket.</p>
 
             <div class="actions-list">
-              <button class="btn-primary full">Approve & Mark Done</button>
+              <button class="btn-primary full" onclick="document.getElementById('approveModal').classList.add('show')">Approve & Mark Done</button>
               <button class="btn-outline full" onclick="document.getElementById('requestChangesModal').classList.add('show')">Request Changes</button>
               <button class="btn-outline full" onclick="document.getElementById('reassignModal').classList.add('show')">Reassign Ticket</button>
               <button class="btn-danger full" onclick="document.getElementById('deleteTicketModal').classList.add('show')">Delete ticket</button>
@@ -224,6 +224,27 @@
         <div class="modal-actions">
           <button type="button" class="btn-outline" onclick="document.getElementById('deleteTicketModal').classList.remove('show')">Cancel</button>
           <button type="button" class="btn-danger-solid">Delete Ticket</button>
+        </div>
+      </div>
+    </div>
+    <!-- approve ticket modal -->
+    <div class="modal-overlay" id="approveModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="success-icon">✓</div>
+        <h2>Approve &amp; Mark Done?</h2>
+        <p class="modal-sub">This ticket is currently waiting for your review.</p>
+
+        <div class="ticket-summary-box">
+          <p class="ticket-summary-title">Fix login validation</p>
+          <p class="ticket-summary-assignee">Assigned to Ahmad Khalil</p>
+          <p class="status-transition">Need Review <span>→</span> Done</p>
+        </div>
+
+        <p class="modal-desc">Approving will mark the work as completed, keep the ticket in the project history, and record your approval in the activity log.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('approveModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-success-solid">Mark Done</button>
         </div>
       </div>
     </div>
