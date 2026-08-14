@@ -42,16 +42,23 @@
 
     <!-- Main -->
     <section class="main">
-      <div class="topbar">
-        <button class="menu-btn" id="menuBtn">☰</button>
+ <div class="topbar">
+  <button class="menu-btn" id="menuBtn">☰</button>
 
-        <div class="topbar-title">Personal workspace</div>
+  <div class="topbar-title">Personal workspace</div>
 
-        <div class="topbar-user">
-          <div class="avatar">T</div>
-          <span>Tareem</span>
-        </div>
-      </div>
+  <div class="topbar-user" id="profileBtn">
+    <div class="avatar">T</div>
+    <span>Tareem</span>
+    <span class="profile-arrow">⌄</span>
+
+    <div class="profile-dropdown" id="profileDropdown">
+      <a href="./profile.html">Profile</a>
+      <a href="./accountSettings.html">Account Settings</a>
+      <a href="#" class="logout">Log out</a>
+    </div>
+  </div>
+</div>
 
       <div class="main-container">
         <section class="dashboard">
@@ -215,5 +222,6 @@
     </section>
 
     <script src="./assets/js/sidebar.js"></script>
+   
   </body>
 </html>
