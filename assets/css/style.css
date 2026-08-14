@@ -1142,3 +1142,6 @@ body {
   color: var(--text-gray);
   margin: 12px 0 0;
 }
+.form-group select {
+  cursor: pointer;
+}
