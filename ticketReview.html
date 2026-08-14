@@ -139,7 +139,7 @@
               <button class="btn-primary full">Approve & Mark Done</button>
               <button class="btn-outline full" onclick="document.getElementById('requestChangesModal').classList.add('show')">Request Changes</button>
               <button class="btn-outline full" onclick="document.getElementById('reassignModal').classList.add('show')">Reassign Ticket</button>
-              <button class="btn-danger full">Delete ticket</button>
+              <button class="btn-danger full" onclick="document.getElementById('deleteTicketModal').classList.add('show')">Delete ticket</button>
             </div>
           </div>
         </div>
@@ -210,6 +210,20 @@
         <div class="modal-actions">
           <button type="button" class="btn-outline" onclick="document.getElementById('reassignModal').classList.remove('show')">Cancel</button>
           <button type="button" class="btn-primary">Reassign</button>
+        </div>
+      </div>
+    </div>
+    <!-- delete ticket modal -->
+    <div class="modal-overlay" id="deleteTicketModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box small">
+        <div class="warning-icon">!</div>
+        <h2>Delete this ticket?</h2>
+        <p class="modal-danger-text">This action cannot be undone.</p>
+        <p class="modal-desc">"Fix login validation" will be permanently removed from this project and from the assigned member's My Tickets.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('deleteTicketModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-danger-solid">Delete Ticket</button>
         </div>
       </div>
     </div>
