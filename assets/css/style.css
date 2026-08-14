@@ -961,3 +961,13 @@ body {
   border-color: var(--border);
   color: #DC2626;
 }
+/* project members page */
+.members-header-panel {
+  margin-bottom: 16px;
+}
+
+.members-header-panel h3 {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
