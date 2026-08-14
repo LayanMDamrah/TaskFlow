@@ -173,7 +173,7 @@
       </div>
     </section>
     <!-- edit project modal -->
-    <div class="modal-overlay" id="editProjectModal">
+    <div class="modal-overlay" id="editProjectModal" onclick="if(event.target === this) this.classList.remove('show')">
       <div class="modal-box">
         <h2>Project Information</h2>
         <p class="modal-sub">Make changes to the project details below.</p>
@@ -210,6 +210,14 @@
             </div>
           </div>
         </form>
+        <div class="modal-note">
+          Project members are <a href="./projectMembers.html">managed separately</a> from the Members page.
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('editProjectModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-primary">Save Changes</button>
+        </div>
       </div>
     </div>
     <script src="./assets/js/sidebar.js"></script>
