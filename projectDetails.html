@@ -63,7 +63,7 @@
             <p class="subtitle">Redesign the company website with a cleaner structure, improved navigation and responsive layouts.</p>
           </div>
           <div class="header-actions">
-            <button class="btn-outline">Edit Project</button>
+            <button class="btn-outline" onclick="document.getElementById('editProjectModal').classList.add('show')">Edit Project</button>
             <button class="btn-danger">Delete Project</button>
           </div>
         </div>
@@ -172,7 +172,46 @@
         </div>
       </div>
     </section>
+    <!-- edit project modal -->
+    <div class="modal-overlay" id="editProjectModal">
+      <div class="modal-box">
+        <h2>Project Information</h2>
+        <p class="modal-sub">Make changes to the project details below.</p>
 
+        <form class="modal-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="projectName">Project Name</label>
+              <input id="projectName" name="projectName" type="text" value="Website Redesign" placeholder="Enter project name" />
+            </div>
+            <div class="form-group">
+              <label for="projectStatus">Project Status</label>
+              <select id="projectStatus" name="projectStatus">
+                <option>Active</option>
+                <option>On Hold</option>
+                <option>Completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="projectDescription">Description</label>
+            <textarea id="projectDescription" name="projectDescription" rows="3" placeholder="Enter project description">Redesign the company website to improve usability, performance, and the overall customer experience.</textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input id="startDate" name="startDate" type="text" value="Aug 01, 2026" placeholder="Enter start date" />
+            </div>
+            <div class="form-group">
+              <label for="endDate">End Date</label>
+              <input id="endDate" name="endDate" type="text" value="Sep 30, 2026" placeholder="Enter end date" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="./assets/js/sidebar.js"></script>
   </body>
 </html>
