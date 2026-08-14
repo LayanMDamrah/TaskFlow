@@ -137,7 +137,7 @@
 
             <div class="actions-list">
               <button class="btn-primary full">Approve & Mark Done</button>
-              <button class="btn-outline full">Request Changes</button>
+              <button class="btn-outline full" onclick="document.getElementById('requestChangesModal').classList.add('show')">Request Changes</button>
               <button class="btn-outline full">Reassign Ticket</button>
               <button class="btn-danger full">Delete ticket</button>
             </div>
@@ -145,7 +145,31 @@
         </div>
       </div>
     </section>
+    <!-- request changes modal -->
+    <div class="modal-overlay" id="requestChangesModal" onclick="if(event.target === this) this.classList.remove('show')">
+      <div class="modal-box">
+        <h2>Request Changes</h2>
+        <p class="modal-sub">Send this ticket back to the current assignee with your feedback.</p>
 
+        <div class="modal-note">
+          Ticket: Build responsive login page · Assignee: Ahmad Saleh
+        </div>
+
+        <form class="modal-form">
+          <div class="form-group">
+            <label>Changes required</label>
+            <textarea rows="3" placeholder="Please update the form validation and fix the mobile spacing before resubmitting."></textarea>
+          </div>
+        </form>
+
+        <p class="modal-note-small">The ticket status changes to Attention and returns to In Progress.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-outline" onclick="document.getElementById('requestChangesModal').classList.remove('show')">Cancel</button>
+          <button type="button" class="btn-primary">Send Back</button>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/sidebar.js"></script>
   </body>
 </html>

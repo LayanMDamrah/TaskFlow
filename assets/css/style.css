@@ -1136,3 +1136,9 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+/* request changes modal small note */
+.modal-note-small {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin: 12px 0 0;
+}
