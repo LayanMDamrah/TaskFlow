@@ -1,0 +1,264 @@
+.profile{
+ display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 100%;
+  height:5rem;
+  margin-top: 1.3rem;
+  margin-bottom: 4rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 1rem;
+  
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.pra-ava {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.avatar-d {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--purple-light);
+  color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.profile-description {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.btn {
+  margin-left: auto;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  padding: 0.7rem;
+  border-radius: 1.2rem;
+  margin-right: 2rem;
+}
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-top: 2rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 2.625rem;
+  padding: 0 0.75rem;
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--white);
+  color: var(--text-dark);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--purple);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  padding: 0.625rem 1.125rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-btn,
+.save-btn {
+  width: 10rem;
+  padding: 0rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.cancel-btn {
+  background: var(--white);
+  color: var(--text-dark);
+  border: 0.0625rem solid var(--border);
+  
+}
+
+.save-btn {
+  background: var(--purple);
+  color: var(--white);
+  border: 0.0625rem solid var(--purple);
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .profile {
+    height: auto;
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .profile-row {
+    padding-top: 1.5rem;
+  }
+
+  .pra-ava {
+    flex-wrap: wrap;
+  }
+
+  .profile-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .btn {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+
+  .profile-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+    margin-left: 0;
+    min-height: 2.75rem;
+  }
+}
+
+.topbar-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profile-arrow {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.topbar-user.open .profile-arrow {
+  transform: rotate(180deg);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+
+  width: 190px;
+  padding: 8px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: none;
+  flex-direction: column;
+
+  z-index: 1000;
+}
+
+.profile-dropdown.show {
+  display: flex;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 10px 12px;
+
+  color: var(--text-dark);
+  text-decoration: none;
+
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.profile-dropdown a:hover {
+  background: var(--purple-light);
+  color: var(--purple);
+}
+
+.profile-dropdown .logout {
+  color: #dc2626;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 12px;
+}
+
+.profile-dropdown .logout:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}

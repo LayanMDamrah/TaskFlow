@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TaskFlow — Projects</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css?v=4" />
   </head>
 
   <body>
@@ -45,15 +45,54 @@
 
       <!-- Topbar -->
       <div class="topbar">
-        <button class="menu-btn" id="menuBtn">☰</button>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+        >
+          ☰
+        </button>
 
         <div class="topbar-title">
           Personal workspace
         </div>
 
-        <div class="topbar-user">
-          <div class="avatar">T</div>
-          <span>Tareem</span>
+        <div
+          class="topbar-user"
+          id="profileBtn"
+        >
+          <div class="avatar">
+            T
+          </div>
+
+          <span>
+            Tareem
+          </span>
+
+          <span
+            class="profile-arrow"
+            aria-hidden="true"
+          ></span>
+
+          <div
+            class="profile-dropdown"
+            id="profileDropdown"
+          >
+            <a href="./profile.html">
+              Profile
+            </a>
+
+            <a href="./account.html">
+              Account Settings
+            </a>
+
+            <a
+              href="./login.html"
+              class="logout"
+            >
+              Log out
+            </a>
+          </div>
         </div>
       </div>
 
@@ -70,7 +109,10 @@
             </p>
           </div>
 
-          <button class="btn-primary">
+          <button
+            class="btn-primary"
+            type="button"
+          >
             + Create Project
           </button>
         </div>
@@ -79,14 +121,18 @@
         <div class="filters">
 
           <div class="search-box">
-            <span>🔍</span>
+  <span
+    class="search-icon"
+    aria-hidden="true"
+  ></span>
 
-            <input
-              type="text"
-              placeholder="Search projects..."
-              aria-label="Search projects"
-            />
-          </div>
+  <input
+    type="text"
+    id="projectSearch"
+    placeholder="Search projects..."
+    aria-label="Search projects"
+  />
+</div>
 
           <select
             class="filter-select"
@@ -328,5 +374,6 @@
     </section>
 
     <script src="./assets/js/sidebar.js"></script>
+<script src="./assets/js/projects.js"></script>
   </body>
 </html>

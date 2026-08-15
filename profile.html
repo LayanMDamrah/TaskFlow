@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TaskFlow — Profile</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css?v=3" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css?v=2" />
+    <link rel="stylesheet" href="./assets/css/profile.css?v=2" />
+  </head>
+
+  <body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <ul class="nav-list">
+
+        <li class="nav-item">
+          <a href="./dashboard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+
+      <!-- Topbar -->
+      <div class="topbar">
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+        >
+          ☰
+        </button>
+
+        <div class="topbar-title">
+          Personal workspace
+        </div>
+
+        <div
+          class="topbar-user"
+          id="profileBtn"
+        >
+
+          <div class="avatar">
+            T
+          </div>
+
+          <span>
+            Tareem
+          </span>
+
+          <span
+            class="profile-arrow"
+            aria-hidden="true"
+          ></span>
+
+          <div
+            class="profile-dropdown"
+            id="profileDropdown"
+          >
+
+            <a href="./profile.html">
+              Profile
+            </a>
+
+            <a href="./account.html">
+              Account Settings
+            </a>
+
+            <a
+              href="./login.html"
+              class="logout"
+            >
+              Log out
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Profile Content -->
+      <div class="main-container">
+
+        <section class="dashboard">
+
+          <!-- Page Title -->
+          <div class="title">
+
+            <h1>
+              Profile
+            </h1>
+
+            <p class="topbar-title">
+              Update your personal information.
+            </p>
+
+          </div>
+
+          <!-- Profile Card -->
+          <div class="profile">
+
+            <div class="title">
+
+              <h1>
+                Personal Information
+              </h1>
+
+              <p class="topbar-title">
+                Edit the details connected to your TaskFlow account.
+              </p>
+
+            </div>
+
+            <!-- Profile Photo -->
+            <div class="profile-row">
+
+              <div class="pra-ava">
+
+                <span class="avatar-d">
+                  TA
+                </span>
+
+                <div class="profile-info">
+
+                  <span class="profile-name">
+                    Profile photo
+                  </span>
+
+                  <span class="profile-description">
+                    Optional profile image for your account.
+                  </span>
+
+                </div>
+
+                <button
+                  type="button"
+                  class="btn"
+                >
+                  Change photo
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- Profile Form -->
+            <form class="profile-form">
+
+              <div class="form-group">
+
+                <label for="fullName">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter your name"
+                />
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone"
+                />
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="gender">
+                  Gender
+                </label>
+
+                <select
+                  id="gender"
+                  name="gender"
+                >
+                  <option value="">
+                    Select gender
+                  </option>
+
+                  <option value="male">
+                    Male
+                  </option>
+
+                  <option value="female">
+                    Female
+                  </option>
+
+                  <option value="other">
+                    Other
+                  </option>
+                </select>
+
+              </div>
+
+              <!-- Form Actions -->
+              <div class="form-actions">
+
+                <button
+                  type="reset"
+                  class="cancel-btn"
+                >
+                  Cancel
+                </button>
+
+                <button
+                  type="submit"
+                  class="save-btn"
+                >
+                  Save Changes
+                </button>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+    <script src="./assets/js/sidebar.js"></script>
+
+  </body>
+</html>
