@@ -1,0 +1,263 @@
+.btn-get-started {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-main);
+    background-color: var(--primary-color);
+    color: #fff;
+
+    width: fit-content;
+    padding: 11px 17px;
+
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-get-started:link,
+.btn-get-started:visited,
+.btn-get-started:hover,
+.btn-get-started:active {
+    color: #fff;
+}
+
+.btn-get-started:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-get-started:active {
+    background-color: var(--primary-color);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+
+    width: calc(100% - 176px);
+    max-width: 1264px;
+
+    margin: 30px auto 0;
+    gap: 76px;
+}
+
+.hero-content {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    padding: 20px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.btn-gs-large {
+    padding: 14px 22px;
+    font-size: 15px;
+}
+
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-main);
+    background: #fff;
+    color: var(--text-dark);
+
+    width: fit-content;
+    padding: 14px 22px;
+
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid var(--border-color);
+    line-height: 1;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.btn-login:link,
+.btn-login:visited,
+.btn-login:active {
+    color: var(--text-dark);
+}
+
+.btn-login:hover {
+    color: var(--text-dark);
+    background: var(--back-color);
+}
+
+.trust-line {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: fit-content;
+}
+
+.trust-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text-muted);
+}
+
+.features-strip {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    width: calc(100% - 176px);
+    max-width: 1264px;
+
+    margin: 30px auto 20px;
+    gap: 24px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+    max-width: 408px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    background: var(--back-color);
+    border-radius: 9px;
+
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.feature h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-top: 10px;
+}
+
+.feature-p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        width: calc(100% - 80px);
+        gap: 40px;
+    }
+
+    .features-strip {
+        width: calc(100% - 80px);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .login-landing {
+        max-width: 100%;
+    }
+
+    .features-strip {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .feature {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: calc(100% - 48px);
+        margin-top: 20px;
+        gap: 28px;
+    }
+
+    .features-strip {
+        width: calc(100% - 48px);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap: 16px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .trust-line {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        width: calc(100% - 32px);
+        margin-top: 16px;
+    }
+
+    .features-strip {
+        width: calc(100% - 32px);
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-gs-large,
+    .btn-login,
+    .btn-get-started {
+        width: 100%;
+        text-align: center;
+    }
+
+    .trust-line {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

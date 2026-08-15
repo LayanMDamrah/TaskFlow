@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Login</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" aria-label="TaskFlow home">
+            <div class="logo-icon" aria-hidden="true"></div>
+            <span class="logo-text">TaskFlow</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">← Back to home</a>
+        </div>
+    </nav>
+
+    <main class="login-content">
+
+        <section class="login-form">
+
+            <div class="badge">WELCOME BACK</div>
+
+            <h1 class="login-title">Log in to TaskFlow</h1>
+
+            <p class="login-description">
+                Continue managing your projects and tickets from one place.
+            </p>
+
+            <form action="dashboard.html" method="GET" class="loginform">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="term-forgetPas">
+
+                    <div class="terms">
+                        <input
+                            type="checkbox"
+                            id="remember"
+                            name="remember"
+                        >
+
+                        <label for="remember">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="forget-password-link">
+                        <a href="forget-password.html">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="login-submit">
+                    Log in
+                </button>
+
+                <div class="signup-link">
+                    Don't have an account?
+                    <a href="signup.html">Create account</a>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="login-landing">
+
+            <div class="tag">YOUR WORKSPACE</div>
+
+            <h2>
+                Projects, tickets, and progress all in one view.
+            </h2>
+
+            <p>
+                Track what you manage, what is assigned to you,
+                and what needs attention next.
+            </p>
+
+            <div class="preview-card">
+
+                <div class="preview-card-header">
+                    <h3 class="preview-project-title">
+                        Website Redesign
+                    </h3>
+
+                    <span class="role-tag">
+                        Project Manager
+                    </span>
+                </div>
+
+                <hr>
+
+                <div class="preview-stats">
+
+                    <div>
+                        <div class="stat-header">
+                            <span class="stat-number">12</span>
+                            <span class="dot dot-orange"></span>
+                        </div>
+
+                        <div class="stat-label">
+                            Pending
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="stat-header">
+                            <span class="stat-number">6</span>
+                            <span class="dot dot-purple"></span>
+                        </div>
+
+                        <div class="stat-label">
+                            In Progress
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="stat-header">
+                            <span class="stat-number">9</span>
+                            <span class="dot dot-green"></span>
+                        </div>
+
+                        <div class="stat-label">
+                            Done
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="preview-updates-title">
+                    Recently updated
+                </div>
+
+                <div class="ticket-row">
+                    <span class="ticket-name">
+                        Fix login validation
+                    </span>
+
+                    <span class="status status-progress">
+                        In Progress
+                    </span>
+                </div>
+
+                <div class="ticket-row">
+                    <span class="ticket-name">
+                        Create project API
+                    </span>
+
+                    <span class="status status-pending">
+                        Pending
+                    </span>
+                </div>
+
+                <div class="ticket-row">
+                    <span class="ticket-name">
+                        Review dashboard UI
+                    </span>
+
+                    <span class="status status-done">
+                        Done
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

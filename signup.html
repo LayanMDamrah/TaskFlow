@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Sign Up</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" aria-label="TaskFlow home">
+            <div class="logo-icon" aria-hidden="true"></div>
+            <span class="logo-text">TaskFlow</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">← Back to home</a>
+        </div>
+    </nav>
+
+    <main class="signup-layout">
+
+        <section class="registration-form">
+
+            <div class="badge">GET STARTED</div>
+
+            <h1 class="signup-title">Create your account</h1>
+
+            <p class="signup-description">
+                Create your TaskFlow account to manage projects and tickets with your team.
+            </p>
+
+            <form action="dashboard.html" method="GET" class="signupform">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="phone-gender">
+
+                    <div class="phone-gender-col">
+                        <label for="phonenumber">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phonenumber"
+                            name="phonenumber"
+                            placeholder="Phone number"
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <div class="phone-gender-col">
+                        <label for="gender">Gender</label>
+
+                        <select id="gender" name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                    <div class="password-hint">
+                        Use at least 8 characters
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirmPassword"
+                        placeholder="Re-enter your password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="terms signup-terms">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        I agree to the
+                        <a href="#">Terms of Service</a>
+                        and
+                        <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="signup-submit">
+                    Create account
+                </button>
+
+                <div class="login-link">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="signup-security">
+
+            <div class="tag">BUILT FOR TEAMS</div>
+
+            <h2>
+                From account creation to your first ticket.
+            </h2>
+
+            <p>
+                Create your account, join or manage projects, collaborate with
+                project members, and keep ticket work organized.
+            </p>
+
+            <div class="getting-started">
+
+                <h3>Getting started</h3>
+
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Create your account</div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Create or join a project</div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Collaborate with project members</div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-text">Work on assigned tickets</div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
