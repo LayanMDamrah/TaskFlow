@@ -680,3 +680,72 @@
     font-size: 8px;
   }
 }
+/* ========================================
+   Final dashboard mobile fixes
+======================================== */
+
+.main-container {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .dashboard {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .title {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dashboard > .cards-row:first-of-type {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .dashboard > .cards-row:nth-of-type(2) {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .my-projects {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .recent-activity {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .dashboard > .cards-row:first-of-type {
+    gap: 8px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}

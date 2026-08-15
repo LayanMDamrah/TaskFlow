@@ -17,23 +17,15 @@ if (menuBtn && sidebar) {
 // ================================
 
 const profileBtn = document.getElementById("profileBtn");
-const profileDropdown = document.getElementById("profileDropdown");
 
-if (profileBtn && profileDropdown) {
-
+if (profileBtn) {
   profileBtn.addEventListener("click", (event) => {
     event.stopPropagation();
 
-    profileDropdown.classList.toggle("show");
     profileBtn.classList.toggle("open");
   });
 
-  profileDropdown.addEventListener("click", (event) => {
-    event.stopPropagation();
-  });
-
   document.addEventListener("click", () => {
-    profileDropdown.classList.remove("show");
     profileBtn.classList.remove("open");
   });
 }
