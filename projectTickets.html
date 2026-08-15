@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TaskFlow — Project Tickets</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css?v=2" />
+  </head>
+
+  <body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span class="logo-text">TaskFlow</span>
+      </div>
+
+      <ul class="nav-list">
+
+        <li class="nav-item">
+          <a href="./dashboard.html">
+            <span class="dot"></span>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="./myTickets.html">
+            <span class="dot"></span>
+            My Tickets
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="./projectPage.html">
+            <span class="dot"></span>
+            Projects
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <!-- Main -->
+    <section class="main">
+
+      <!-- Topbar -->
+      <div class="topbar">
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+        >
+          ☰
+        </button>
+
+        <div class="topbar-title">
+          Personal workspace
+        </div>
+
+        <div class="topbar-user">
+          <div class="avatar">T</div>
+          <span>Tareem</span>
+        </div>
+
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+
+        <h1 class="project-title">
+          Website Redesign
+        </h1>
+
+        <!-- Tabs -->
+        <div class="tabs">
+
+          <a
+            href="./projectDetails.html?id=1"
+            class="tab"
+          >
+            Overview
+          </a>
+
+          <a
+            href="./projectTickets.html?id=1"
+            class="tab active"
+          >
+            Tickets
+          </a>
+
+          <a
+            href="./projectMembers.html?id=1"
+            class="tab"
+          >
+            Members
+          </a>
+
+        </div>
+
+        <!-- Tickets Header -->
+        <div class="tickets-header">
+
+          <div>
+            <h2>All Tickets</h2>
+
+            <p class="subtitle">
+              Manage every ticket in this project and see who is responsible
+              for each one.
+            </p>
+          </div>
+
+          <button
+            class="btn-primary"
+            type="button"
+            onclick="openCreateTicketModal()"
+          >
+            Create Ticket
+          </button>
+
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+
+          <div class="search-box">
+
+            <input
+              type="text"
+              placeholder="Search tickets..."
+              aria-label="Search tickets"
+            />
+
+          </div>
+
+          <select
+            class="filter-select"
+            aria-label="Filter tickets by status"
+          >
+            <option>Status: All</option>
+            <option>Pending</option>
+            <option>In Progress</option>
+            <option>Need Review</option>
+            <option>Done</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="Filter tickets by priority"
+          >
+            <option>Priority: All</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+
+          <select
+            class="filter-select"
+            aria-label="Filter tickets by assignee"
+          >
+            <option>Assignee: All</option>
+            <option>Ahmad Saleh</option>
+            <option>Omar Khalil</option>
+            <option>Lina Nasser</option>
+            <option>Maya Hassan</option>
+          </select>
+
+        </div>
+
+        <!-- Tickets Table -->
+        <div class="tickets-table-wrap">
+
+          <table class="tickets-table">
+
+            <thead>
+              <tr>
+                <th>Ticket</th>
+                <th>Assignee</th>
+                <th>Role</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Due date</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <!-- Ticket 1 -->
+              <tr>
+
+                <td>
+                  <p class="ticket-name">
+                    Build login page
+                  </p>
+
+                  <span class="ticket-desc">
+                    Create responsive login UI and validation.
+                  </span>
+                </td>
+
+                <td>Ahmad Saleh</td>
+
+                <td class="role-cell">
+                  Frontend Developer
+                </td>
+
+                <td>
+                  <span class="priority-badge high">
+                    High
+                  </span>
+                </td>
+
+                <td>
+                  <span class="status-badge-cell progress">
+                    In Progress
+                  </span>
+                </td>
+
+                <td>
+                  Aug 18
+                </td>
+
+                <td class="menu-cell">
+
+                  <button
+                    class="dots-btn"
+                    type="button"
+                    onclick="toggleMenu(this)"
+                    aria-label="Ticket actions"
+                  >
+                    ⋯
+                  </button>
+
+                  <div class="dropdown-menu">
+
+                    <a
+                      href="./ticketReview.html?id=1&ticket=1"
+                      class="dropdown-item review"
+                    >
+                      Review Ticket
+                    </a>
+
+                    <button
+                      type="button"
+                      class="dropdown-item delete"
+                    >
+                      Delete Ticket
+                    </button>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+              <!-- Ticket 2 -->
+              <tr>
+
+                <td>
+                  <p class="ticket-name">
+                    Create projects API
+                  </p>
+
+                  <span class="ticket-desc">
+                    Implement create/read/update project endpoints.
+                  </span>
+                </td>
+
+                <td>Omar Khalil</td>
+
+                <td class="role-cell">
+                  Backend Developer
+                </td>
+
+                <td>
+                  <span class="priority-badge high">
+                    High
+                  </span>
+                </td>
+
+                <td>
+                  <span class="status-badge-cell pending">
+                    Pending
+                  </span>
+                </td>
+
+                <td>
+                  Aug 20
+                </td>
+
+                <td class="menu-cell">
+
+                  <button
+                    class="dots-btn"
+                    type="button"
+                    onclick="toggleMenu(this)"
+                    aria-label="Ticket actions"
+                  >
+                    ⋯
+                  </button>
+
+                  <div class="dropdown-menu">
+
+                    <a
+                      href="./ticketReview.html?id=1&ticket=2"
+                      class="dropdown-item review"
+                    >
+                      Review Ticket
+                    </a>
+
+                    <button
+                      type="button"
+                      class="dropdown-item delete"
+                    >
+                      Delete Ticket
+                    </button>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+              <!-- Ticket 3 -->
+              <tr>
+
+                <td>
+                  <p class="ticket-name">
+                    Design dashboard
+                  </p>
+
+                  <span class="ticket-desc">
+                    Finalize dashboard layout and interaction states.
+                  </span>
+                </td>
+
+                <td>Lina Nasser</td>
+
+                <td class="role-cell">
+                  UI/UX Designer
+                </td>
+
+                <td>
+                  <span class="priority-badge medium">
+                    Medium
+                  </span>
+                </td>
+
+                <td>
+                  <span class="status-badge-cell done">
+                    Done
+                  </span>
+                </td>
+
+                <td>
+                  Aug 16
+                </td>
+
+                <td class="menu-cell">
+
+                  <button
+                    class="dots-btn"
+                    type="button"
+                    onclick="toggleMenu(this)"
+                    aria-label="Ticket actions"
+                  >
+                    ⋯
+                  </button>
+
+                  <div class="dropdown-menu">
+
+                    <a
+                      href="./ticketReview.html?id=1&ticket=3"
+                      class="dropdown-item review"
+                    >
+                      Review Ticket
+                    </a>
+
+                    <button
+                      type="button"
+                      class="dropdown-item delete"
+                    >
+                      Delete Ticket
+                    </button>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+              <!-- Ticket 4 -->
+              <tr>
+
+                <td>
+                  <p class="ticket-name">
+                    Test authentication flow
+                  </p>
+
+                  <span class="ticket-desc">
+                    Verify login, signup and reset-password scenarios.
+                  </span>
+                </td>
+
+                <td>Maya Hassan</td>
+
+                <td class="role-cell">
+                  QA Engineer
+                </td>
+
+                <td>
+                  <span class="priority-badge medium">
+                    Medium
+                  </span>
+                </td>
+
+                <td>
+                  <span class="status-badge-cell completed">
+                    Completed
+                  </span>
+                </td>
+
+                <td>
+                  Aug 17
+                </td>
+
+                <td class="menu-cell">
+
+                  <button
+                    class="dots-btn"
+                    type="button"
+                    onclick="toggleMenu(this)"
+                    aria-label="Ticket actions"
+                  >
+                    ⋯
+                  </button>
+
+                  <div class="dropdown-menu">
+
+                    <a
+                      href="./ticketReview.html?id=1&ticket=4"
+                      class="dropdown-item review"
+                    >
+                      Review Ticket
+                    </a>
+
+                    <button
+                      type="button"
+                      class="dropdown-item delete"
+                    >
+                      Delete Ticket
+                    </button>
+
+                  </div>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Create Ticket Modal -->
+    <div
+      class="modal-overlay"
+      id="createTicketModal"
+      onclick="closeCreateModalFromOverlay(event)"
+    >
+
+      <div class="modal-box">
+
+        <h2>
+          Ticket Details
+        </h2>
+
+        <p class="modal-sub">
+          Add the work details and assign it to a project member.
+        </p>
+
+        <form class="modal-form">
+
+          <div class="form-group">
+
+            <label for="ticketTitle">
+              Title
+            </label>
+
+            <input
+              id="ticketTitle"
+              name="ticketTitle"
+              type="text"
+              placeholder="e.g. Build responsive navigation"
+            />
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="ticketDescription">
+              Description
+            </label>
+
+            <textarea
+              id="ticketDescription"
+              name="ticketDescription"
+              rows="3"
+              placeholder="Describe what needs to be done, expected outcome, and any important notes..."
+            ></textarea>
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="ticketAssignee">
+              Assignee
+            </label>
+
+            <select
+              id="ticketAssignee"
+              name="ticketAssignee"
+            >
+              <option value="">
+                Select project member
+              </option>
+
+              <option>Ahmad Saleh</option>
+              <option>Omar Khalil</option>
+              <option>Lina Nasser</option>
+              <option>Maya Hassan</option>
+
+            </select>
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="ticketPriority">
+              Priority
+            </label>
+
+            <select
+              id="ticketPriority"
+              name="ticketPriority"
+            >
+              <option value="">
+                Select priority
+              </option>
+
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+
+            </select>
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="ticketDueDate">
+              Due Date
+            </label>
+
+            <input
+              id="ticketDueDate"
+              name="ticketDueDate"
+              type="date"
+            />
+
+          </div>
+
+        </form>
+
+        <div class="modal-actions">
+
+          <button
+            type="button"
+            class="btn-outline"
+            onclick="closeCreateTicketModal()"
+          >
+            Cancel
+          </button>
+
+          <button
+            type="button"
+            class="btn-primary"
+          >
+            Create Ticket
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/tickets.js"></script>
+
+    <script>
+
+      function openCreateTicketModal() {
+        document
+          .getElementById("createTicketModal")
+          .classList.add("show");
+      }
+
+      function closeCreateTicketModal() {
+        document
+          .getElementById("createTicketModal")
+          .classList.remove("show");
+      }
+
+      function closeCreateModalFromOverlay(event) {
+        const modal =
+          document.getElementById("createTicketModal");
+
+        if (event.target === modal) {
+          closeCreateTicketModal();
+        }
+      }
+
+      /*
+        If we came from:
+        projectDetails.html → Create Ticket
+
+        URL will be:
+        projectTickets.html?id=1&action=create
+      */
+      const params =
+        new URLSearchParams(window.location.search);
+
+      if (params.get("action") === "create") {
+        openCreateTicketModal();
+      }
+
+    </script>
+
+  </body>
+</html>

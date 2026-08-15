@@ -1,36 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow — Projects</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow — My Tickets</title>
 
-     <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-<body>
- <!-- sidebar section -->
+    <link rel="stylesheet" href="./assets/css/style.css?v=2" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
     <nav class="sidebar">
-      <div class="logo">
+      <a href="./dashboard.html" class="logo">
         <div class="logo-mark"></div>
         <span class="logo-text">TaskFlow</span>
-      </div>
+      </a>
 
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="./dashoard.html">
+          <a href="./dashboard.html">
             <span class="dot"></span>
             Dashboard
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item active">
           <a href="./myTickets.html">
             <span class="dot"></span>
             My Tickets
           </a>
         </li>
 
-        <li class="nav-item active">
+        <li class="nav-item">
           <a href="./projectPage.html">
             <span class="dot"></span>
             Projects
@@ -40,19 +41,268 @@
     </nav>
 
     <!-- Main -->
-    <section class="main">
-      <div class="topbar">
-        <button class="menu-btn" id="menuBtn">☰</button>
+    <main class="main">
 
-        <div class="topbar-title">Personal workspace</div>
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-title">
+          Personal workspace
+        </div>
 
         <div class="topbar-user">
           <div class="avatar">T</div>
           <span>Tareem</span>
         </div>
-      </div>
-    </section>
-    <script src="./assets/js/sidebar.js"></script>
-    
-</body>
+      </header>
+
+      <!-- Page Content -->
+      <section class="tickets-page">
+
+        <!-- Header -->
+        <div class="tickets-page-header">
+          <h1>My Tickets</h1>
+
+          <p>
+            Everything assigned to you, from all your projects.
+          </p>
+        </div>
+
+        <!-- Summary -->
+        <div class="tickets-summary">
+          <span>4 tickets</span>
+          <strong>Assigned to you</strong>
+        </div>
+
+        <!-- Tickets List -->
+        <div class="my-tickets-list">
+
+          <!-- Ticket 1 -->
+          <a
+            href="./ticketReview.html?id=1&ticket=1"
+            class="my-ticket-card"
+          >
+
+            <div class="ticket-main-info">
+
+              <div class="ticket-label-row">
+                <span class="ticket-dot high"></span>
+                <span class="assigned-label">
+                  You were assigned
+                </span>
+              </div>
+
+              <h2>
+                Finalize homepage UI
+              </h2>
+
+              <p class="ticket-description">
+                Complete the final responsive layout and prepare it for review.
+              </p>
+
+              <span class="ticket-project">
+                Website Redesign
+              </span>
+
+            </div>
+
+            <div class="ticket-side-info">
+
+              <div class="ticket-badges">
+
+                <span class="priority-pill high">
+                  High
+                </span>
+
+                <span class="status-pill">
+                  In Progress
+                </span>
+
+              </div>
+
+              <div class="ticket-deadline">
+                <span>Deadline</span>
+                <strong>Aug 14, 2026</strong>
+              </div>
+
+            </div>
+
+            <span class="ticket-arrow">
+              ›
+            </span>
+
+          </a>
+
+          <!-- Ticket 2 -->
+          <a
+            href="./ticketReview.html?id=1&ticket=2"
+            class="my-ticket-card"
+          >
+
+            <div class="ticket-main-info">
+
+              <div class="ticket-label-row">
+                <span class="ticket-dot medium"></span>
+                <span class="assigned-label">
+                  You were assigned
+                </span>
+              </div>
+
+              <h2>
+                Fix login validation
+              </h2>
+
+              <p class="ticket-description">
+                Update the login error states and validation messages.
+              </p>
+
+              <span class="ticket-project">
+                Client Portal
+              </span>
+
+            </div>
+
+            <div class="ticket-side-info">
+
+              <div class="ticket-badges">
+
+                <span class="priority-pill medium">
+                  Medium
+                </span>
+
+                <span class="status-pill">
+                  Pending
+                </span>
+
+              </div>
+
+              <div class="ticket-deadline">
+                <span>Deadline</span>
+                <strong>Aug 16, 2026</strong>
+              </div>
+
+            </div>
+
+            <span class="ticket-arrow">
+              ›
+            </span>
+
+          </a>
+
+          <!-- Ticket 3 -->
+          <a
+            href="./ticketReview.html?id=3&ticket=3"
+            class="my-ticket-card"
+          >
+
+            <div class="ticket-main-info">
+
+              <div class="ticket-label-row">
+                <span class="ticket-dot low"></span>
+                <span class="assigned-label">
+                  You were assigned
+                </span>
+              </div>
+
+              <h2>
+                Prepare mobile empty state
+              </h2>
+
+              <p class="ticket-description">
+                Create the empty-state design for first-time users.
+              </p>
+
+              <span class="ticket-project">
+                Mobile App
+              </span>
+
+            </div>
+
+            <div class="ticket-side-info">
+
+              <div class="ticket-badges">
+
+                <span class="priority-pill low">
+                  Low
+                </span>
+
+                <span class="status-pill">
+                  Pending
+                </span>
+
+              </div>
+
+              <div class="ticket-deadline">
+                <span>Deadline</span>
+                <strong>Aug 20, 2026</strong>
+              </div>
+
+            </div>
+
+            <span class="ticket-arrow">
+              ›
+            </span>
+
+          </a>
+
+          <!-- Ticket 4 -->
+          <a
+            href="./ticketReview.html?id=1&ticket=4"
+            class="my-ticket-card"
+          >
+
+            <div class="ticket-main-info">
+
+              <div class="ticket-label-row">
+                <span class="ticket-dot high"></span>
+                <span class="assigned-label">
+                  You were assigned
+                </span>
+              </div>
+
+              <h2>
+                Review ticket feedback
+              </h2>
+
+              <p class="ticket-description">
+                Check the latest comments and apply the requested changes.
+              </p>
+
+              <span class="ticket-project">
+                Website Redesign
+              </span>
+
+            </div>
+
+            <div class="ticket-side-info">
+
+              <div class="ticket-badges">
+
+                <span class="priority-pill high">
+                  High
+                </span>
+
+                <span class="status-pill">
+                  Need Review
+                </span>
+
+              </div>
+
+              <div class="ticket-deadline">
+                <span>Deadline</span>
+                <strong>Aug 13, 2026</strong>
+              </div>
+
+            </div>
+
+            <span class="ticket-arrow">
+              ›
+            </span>
+
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+  </body>
 </html>
